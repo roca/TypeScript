@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "out": "out.js", 
+        "outDir": "../js",
+        "sourceMap": true, 
+        "target": "es5"
+    }, 
+    "files": [
+        "*.ts"
+    ]
+}
