@@ -1,11 +1,12 @@
 class Engine {
-	constructor(public hoursePower: number, 
+	constructor(public hoursePower: number,
 		        public engineType: string){
 
 	}
 }
 
 class Car {
+
 	engine: Engine
     constructor(public engine: Engine){
         this.engine = engine;
