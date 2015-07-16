@@ -8,6 +8,7 @@ var Engine = (function () {
 var Car = (function () {
     function Car(engine) {
         this.engine = engine;
+        this.engine = engine;
     }
     return Car;
 })();

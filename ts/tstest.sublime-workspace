@@ -1,0 +1,366 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Cu",
+				"CustomEngine"
+			],
+			[
+				"en",
+				"engineType"
+			],
+			[
+				"stop",
+				"stoppedchan	chan struct ν"
+			],
+			[
+				"Print",
+				"Println	 ƒ"
+			],
+			[
+				"read",
+				"readFromTwitter	 ƒ"
+			],
+			[
+				"sto",
+				"stopchan	<-chan struct ν"
+			],
+			[
+				"fun",
+				"func	func {...} ʂ"
+			],
+			[
+				"e",
+				"engineType"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/romel.campbell/GitHub/Repos/TypeScript/tstest.sublime-project",
+			"settings":
+			{
+				"buffer_size": 225,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Car.ts",
+			"settings":
+			{
+				"buffer_size": 304,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 347.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: Remove Package"
+			],
+			[
+				"P",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/romel.campbell/GitHub/Repos/TypeScript/ts"
+	],
+	"file_history":
+	[
+		"/Users/romel.campbell/GitHub/Repos/TypeScript/ts/auto.ts",
+		"/Users/romel.campbell/GitHub/Repos/TypeScript/ts/auto.js",
+		"/Users/romel.campbell/GitHub/Repos/TypeScript/ts/auto.tsx",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/assets/javascripts/jspm/lib/bootstrap.js",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/vendor/assets/javascripts/jspm/package.json",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/assets/javascripts/jspm/lib/tsconfig.json",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/assets/javascripts/jspm/lib/typings/rx/rx.d.ts",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/assets/javascripts/jspm/lib/typings/angular2/angular2.d.ts",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/assets/javascripts/jspm/lib/typings/es6-promises/es6-promises.d.ts",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/assets/javascripts/jspm/lib/typings/es6-promise/es6-promise.d.ts",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/assets/javascripts/application.js",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/assets/javascripts/car.ts",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/assets/javascripts/tsconfig.json",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/assets/javascripts/jspm/lib/bootstrap.ts",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/views/layouts/application.html.erb",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/helpers/application_helper.rb",
+		"/Users/romel.campbell/RailsProjects/git/ts_demo/app/helpers/welcome_helper.rb",
+		"/Users/romel.campbell/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/romel.campbell/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/romel.campbell/Library/Application Support/Sublime Text 3/Packages/User/Default.sublime-theme",
+		"/Users/romel.campbell/Library/Application Support/Sublime Text 3/Packages/GoSublime/GoSublime.sublime-settings",
+		"/Users/romel.campbell/Library/Application Support/Sublime Text 3/Packages/GoSublime/CHANGELOG.md",
+		"/Users/romel.campbell/GitHub/Repos/TypeScript/ts/tsconfig.json",
+		"/Users/romel.campbell/GitHub/Repos/TypeScript/tsconfig.json",
+		"/Users/romel.campbell/GitHub/Repos/TypeScript/typescript.sublime-project",
+		"/Users/romel.campbell/Library/Application Support/Sublime Text 3/Packages/User/TypeScript.sublime-build",
+		"/Users/romel.campbell/Downloads/typescript_support_for_sublime_text/TypeScript support for Sublime Text/typescript.tmLanguage"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"es5"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/romel.campbell/GitHub/Repos/TypeScript/tstest.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 225,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"vintage":
+							{
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 13
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Car.ts",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"extensions":
+							[
+								"ts"
+							],
+							"syntax": "Packages/typescript.tmLanguage",
+							"vintage":
+							{
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o:///Users/romel.campbell/go/src/github.com/GOCODE/db_demo/mysql":
+	{
+		"height": 142.0
+	},
+	"output.9o:///Users/romel.campbell/go/src/github.com/GOCODE/goblueprints/socialpoll/twittervotes":
+	{
+		"height": 136.0
+	},
+	"output.exec":
+	{
+		"height": 95.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "tstest.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"_vintageous_reset_during_init": true,
+		"vintage":
+		{
+			"_cmdline_cd": "/Applications/Sublime Text.app/Contents/MacOS"
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 348.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

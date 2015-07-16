@@ -1,0 +1,10 @@
+{
+	"settings": {
+		"typescript":{
+		 	"settings": {
+              "auto_complete": true,
+              "build_on_save": false
+		 	}
+		}
+	}
+}

@@ -7,7 +7,6 @@ class Engine {
 
 class Car {
 
-	engine: Engine
     constructor(public engine: Engine){
         this.engine = engine;
 	}
