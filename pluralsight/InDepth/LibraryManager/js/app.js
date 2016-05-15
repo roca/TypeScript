@@ -6,4 +6,5 @@ var HelloWorld = (function () {
 }());
 var hello = new HelloWorld("Hello TypeScript");
 console.log(hello.message);
+console.log("Hello Atom");
 //# sourceMappingURL=app.js.map
