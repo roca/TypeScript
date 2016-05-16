@@ -29,12 +29,17 @@ var Category;
     Category[Category["Children"] = 4] = "Children";
 })(Category || (Category = {}));
 function GetBookTitlesByCategory(categoryFilter) {
-    console.log("Getting books in category: " + categoryFilter);
-    var allBooks = GetAllBooks();
-    return allBooks.
+    console.log("Getting books in category: " + Category[categoryFilter]);
+    return GetAllBooks().
         filter(function (book) { return book.category === categoryFilter; }).
         map(function (book) { return book.title; });
 }
-var allBooks = GetAllBooks();
-LogFirstAvailable(allBooks);
+function LogBookTitles(titles) {
+    for (var _i = 0, titles_1 = titles; _i < titles_1.length; _i++) {
+        var title = titles_1[_i];
+        console.log(title);
+    }
+}
+var poetryBooks = GetBookTitlesByCategory(Category.Poetry);
+LogBookTitles(poetryBooks);
 //# sourceMappingURL=app.js.map

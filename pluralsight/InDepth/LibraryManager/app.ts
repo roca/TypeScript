@@ -31,14 +31,21 @@ enum Category { Biography, Poetry, Fiction, History, Children }
 
 function GetBookTitlesByCategory(categoryFilter: Category): Array<string> {
 
-  console.log("Getting books in category: " + categoryFilter);
+  console.log("Getting books in category: " + Category[categoryFilter]);
 
-  const allBooks = GetAllBooks();
-
-  return allBooks.
-  filter( book => book.category === categoryFilter ).
-  map( book => book.title );
+  return GetAllBooks().
+          filter( book => book.category === categoryFilter ).
+          map( book => book.title );
 
 }
-const allBooks = GetAllBooks();
-LogFirstAvailable(allBooks);
+
+
+function LogBookTitles(titles: string[]): void {
+
+  for (let title of titles) {
+      console.log(title);
+  }
+}
+
+const poetryBooks = GetBookTitlesByCategory(Category.Poetry);
+LogBookTitles(poetryBooks);
