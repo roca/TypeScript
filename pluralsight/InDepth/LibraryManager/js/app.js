@@ -48,7 +48,9 @@ function CreateCustomerID(name, id) {
     return name + id;
 }
 var x;
+x = 6;
 var IdGenerator;
-var myID = CreateCustomerID("daniel", 10);
+IdGenerator = function (name, id) { return id + name; };
+var myID = IdGenerator("daniel", x);
 console.log(myID);
 //# sourceMappingURL=app.js.map

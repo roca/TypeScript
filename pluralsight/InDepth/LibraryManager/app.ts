@@ -60,9 +60,12 @@ function CreateCustomerID(name: string, id: number): string {
 // ***************************************************************
 
 let x: number;
-let IdGenerator: (chars: string, nums: number) => string;
+x = 6;
 
-let myID: string = CreateCustomerID("daniel", 10);
+let IdGenerator: (chars: string, nums: number) => string;
+IdGenerator = (name: string, id: number) => { return id + name; };
+
+let myID: string = IdGenerator("daniel", x);
 console.log(myID);
 
 // const fictionBooks = GetBookTitlesByCategory(Category.Fiction);
