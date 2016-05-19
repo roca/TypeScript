@@ -8,6 +8,7 @@ function GetAllBooks() {
     return books;
 }
 function LogFirstAvailable(books) {
+    if (books === void 0) { books = GetAllBooks(); }
     var numberOfBooks = books.length;
     var firstAvailable = "";
     for (var _i = 0, books_1 = books; _i < books_1.length; _i++) {
@@ -29,6 +30,7 @@ var Category;
     Category[Category["Children"] = 4] = "Children";
 })(Category || (Category = {}));
 function GetBookTitlesByCategory(categoryFilter) {
+    if (categoryFilter === void 0) { categoryFilter = Category.Fiction; }
     console.log("Getting books in category: " + Category[categoryFilter]);
     return GetAllBooks().
         filter(function (book) { return book.category === categoryFilter; }).
@@ -47,10 +49,31 @@ function GetBookById(id) {
 function CreateCustomerID(name, id) {
     return name + id;
 }
-var x;
-x = 6;
-var IdGenerator;
-IdGenerator = function (name, id) { return id + name; };
-var myID = IdGenerator("daniel", x);
-console.log(myID);
+function CreateCustomer(name, age, city) {
+    console.log("Creating customer " + name);
+    if (age) {
+        console.log("Age: " + age);
+    }
+    if (city) {
+        console.log("City: " + city);
+    }
+}
+function CheckoutBooks(customer) {
+    var bookIDs = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        bookIDs[_i - 1] = arguments[_i];
+    }
+    console.log("Checking out books for " + customer);
+    var booksCheckoutedOut = [];
+    for (var _a = 0, bookIDs_1 = bookIDs; _a < bookIDs_1.length; _a++) {
+        var id = bookIDs_1[_a];
+        var book = GetBookById(id);
+        if (book.available) {
+            booksCheckoutedOut.push(book.title);
+        }
+    }
+    return booksCheckoutedOut;
+}
+var myBooks = CheckoutBooks("Thorne", 1, 3, 4);
+myBooks.forEach(function (title) { return console.log(title); });
 //# sourceMappingURL=app.js.map
