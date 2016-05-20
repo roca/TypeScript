@@ -1,5 +1,5 @@
 import { Category } from "./enum";
-import { IBook } from "./interfaces";
+import { IBook, DamagedLogger } from "./interfaces";
 
 function GetAllBooks(): Array<IBook> {
   let books = [
@@ -119,8 +119,14 @@ let myBook: IBook = {
   markDamage: (reason: string) => console.log("Damaged: " + reason),
 };
 
-PrintBook(myBook);
-myBook.markDamage("missing back cover");
+// PrintBook(myBook);
+// myBook.markDamage("torn pages");
+
+let logDamage: DamagedLogger;
+logDamage = (damage: string) => console.log("Damag report: " + damage);
+logDamage("coffee stains");
+
+
 // let checkedOutBooks = GetTitles(false);
 // checkedOutBooks.forEach(title => console.log(title));
 

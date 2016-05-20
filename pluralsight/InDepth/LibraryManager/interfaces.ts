@@ -7,7 +7,11 @@ interface IBook {
   available: boolean;
   category: Category;
   pages?: number;
-  markDamage?: (reason: string) => void;
+  markDamage?: DamagedLogger;
 }
 
-export { IBook };
+interface DamagedLogger {
+  (reason: string): void;
+}
+
+export { IBook, DamagedLogger };

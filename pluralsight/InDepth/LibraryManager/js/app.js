@@ -92,6 +92,7 @@ var myBook = {
     pages: 250,
     markDamage: function (reason) { return console.log("Damaged: " + reason); },
 };
-PrintBook(myBook);
-myBook.markDamage("missing back cover");
+var logDamage;
+logDamage = function (damage) { return console.log("Damag report: " + damage); };
+logDamage("coffee stains");
 //# sourceMappingURL=app.js.map
