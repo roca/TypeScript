@@ -1,4 +1,7 @@
-function GetAllBooks() {
+import { Category } from "./enum";
+import { IBook } from "./interfaces";
+
+function GetAllBooks(): Array<IBook> {
   let books = [
     { id: 1, title: "Ulsses", author: "James Joyce", available: true, category: Category.Fiction },
     { id: 2, title: "Farewell to Arms", author: "Ernest Hemingway", available: false, category: Category.Fiction },
@@ -27,8 +30,6 @@ function LogFirstAvailable(books = GetAllBooks()): void {
     console.log("First Available: " + firstAvailable);
 }
 
-enum Category { Biography, Poetry, Fiction, History, Children }
-
 function GetBookTitlesByCategory(categoryFilter: Category = Category.Fiction): Array<string> {
 
   console.log("Getting books in category: " + Category[categoryFilter]);
@@ -47,7 +48,7 @@ function LogBookTitles(titles: string[]): void {
   }
 }
 
-function GetBookById(id: number) {
+function GetBookById(id: number): IBook {
   const allBooks = GetAllBooks();
   return allBooks.filter(book => book.id === id)[0];
 }
@@ -102,10 +103,26 @@ function GetTitles(bookPropery: any): string[] {
           map(book => book.title);
 }
 
+
+function PrintBook(book: IBook): void {
+  console.log(book.title + " by " + book.author);
+}
 // *******************************************************
 
-let checkedOutBooks = GetTitles(false);
-checkedOutBooks.forEach(title => console.log(title));
+let myBook: IBook = {
+  id: 6,
+  title: "Pride and Predjudice",
+  author: "Jane Austen",
+  available: true,
+  category: Category.Fiction, // Extra comma okay!
+  pages: 250,
+  markDamage: (reason: string) => console.log("Damaged: " + reason),
+};
+
+PrintBook(myBook);
+myBook.markDamage("missing back cover");
+// let checkedOutBooks = GetTitles(false);
+// checkedOutBooks.forEach(title => console.log(title));
 
 // let myBooks: string[] = CheckoutBooks("Thorne", 1, 3, 4);
 // myBooks.forEach(title => console.log(title));
