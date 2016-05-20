@@ -75,8 +75,6 @@ function CheckoutBooks(customer) {
     return booksCheckoutedOut;
 }
 function GetTitles(bookPropery) {
-    var allBooks = GetAllBooks();
-    var foundTitles = [];
     var byAuthor = function (book) {
         return book.author === bookPropery;
     };
@@ -84,10 +82,9 @@ function GetTitles(bookPropery) {
         return book.available === bookPropery;
     };
     var filterBy = { "string": byAuthor, "boolean": byAvailable };
-    foundTitles = allBooks.
+    return GetAllBooks().
         filter(filterBy[typeof bookPropery]).
         map(function (book) { return book.title; });
-    return foundTitles;
 }
 var checkedOutBooks = GetTitles(false);
 checkedOutBooks.forEach(function (title) { return console.log(title); });
