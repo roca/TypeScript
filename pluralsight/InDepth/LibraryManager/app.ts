@@ -84,11 +84,35 @@ function CheckoutBooks(customer: string, ...bookIDs: number[]): string[] {
   return booksCheckoutedOut;
 }
 
+function GetTitles(author: string): string[];
+function GetTitles(available: boolean): string[];
+function GetTitles(bookPropery: any): string[] {
+  const allBooks = GetAllBooks();
+  let foundTitles: string[] = [];
+
+  const byAuthor = (book) => {
+    return book.author === bookPropery ;
+  };
+  const byAvailable = (book) => {
+    return book.available === bookPropery;
+  };
+
+  const filterBy = { "string" : byAuthor, "boolean": byAvailable};
+
+    foundTitles = allBooks.
+                  filter( filterBy[typeof bookPropery] ).
+                  map(book => book.title);
+
+   return foundTitles;
+}
+
 // *******************************************************
 
+let checkedOutBooks = GetTitles(false);
+checkedOutBooks.forEach(title => console.log(title));
 
-let myBooks: string[] = CheckoutBooks("Thorne", 1, 3, 4);
-myBooks.forEach(title => console.log(title));
+// let myBooks: string[] = CheckoutBooks("Thorne", 1, 3, 4);
+// myBooks.forEach(title => console.log(title));
 
 // LogFirstAvailable();
 
