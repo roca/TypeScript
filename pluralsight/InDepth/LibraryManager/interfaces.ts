@@ -7,10 +7,10 @@ interface IBook {
   available: boolean;
   category: Category;
   pages?: number;
-  markDamage?: IDamagedLogger;
+  markDamage?: IDamageLogger;
 }
 
-interface IDamagedLogger {
+interface IDamageLogger {
   (reason: string): void;
 }
 
@@ -27,4 +27,4 @@ interface ILibrarian extends IPerson {
   department: string;
   assistCustomer: (custName: string) => void;
 }
-export { IBook, IDamagedLogger, IAuthor, ILibrarian };
+export { IBook, IDamageLogger, IAuthor, ILibrarian };

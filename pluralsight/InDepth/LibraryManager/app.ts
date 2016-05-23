@@ -1,5 +1,6 @@
 import { Category } from "./enum";
-import { IBook, IDamagedLogger, IAuthor, ILibrarian } from "./interfaces";
+import { IBook, IDamageLogger, IAuthor, ILibrarian } from "./interfaces";
+import { UniversityLibrarian } from "./class";
 
 function GetAllBooks(): Array<IBook> {
   let books = [
@@ -109,22 +110,22 @@ function PrintBook(book: IBook): void {
 }
 // *******************************************************
 
-let myBook: IBook = {
-  id: 6,
-  title: "Pride and Predjudice",
-  author: "Jane Austen",
-  available: true,
-  category: Category.Fiction, // Extra comma okay!
-  pages: 250,
-  markDamage: (reason: string) => console.log("Damaged: " + reason),
-};
+// let myBook: IBook = {
+//   id: 6,
+//   title: "Pride and Predjudice",
+//   author: "Jane Austen",
+//   available: true,
+//   category: Category.Fiction, // Extra comma okay!
+//   pages: 250,
+//   markDamage: (reason: string) => console.log("Damaged: " + reason),
+// };
 
 // PrintBook(myBook);
 // myBook.markDamage("torn pages");
 
-let logDamage: IDamagedLogger;
-logDamage = (damage: string) => console.log("Damag report: " + damage);
-logDamage("coffee stains");
+// let logDamage: IDamageLogger;
+// logDamage = (damage: string) => console.log("Damag report: " + damage);
+// logDamage("coffee stains");
 
 
 // let checkedOutBooks = GetTitles(false);
@@ -153,3 +154,8 @@ logDamage("coffee stains");
 
 // const fictionBooks = GetBookTitlesByCategory(Category.Fiction);
 // fictionBooks.forEach((val, idx, arr) => console.log(++idx + " = " + val));
+
+
+let favoriteLibrarian: ILibrarian = new UniversityLibrarian();
+favoriteLibrarian.name = "Sharon";
+favoriteLibrarian.assistCustomer("Lynda");
