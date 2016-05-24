@@ -84,7 +84,8 @@ function GetTitles(bookPropery) {
 function PrintBook(book) {
     console.log(book.title + " by " + book.author);
 }
-var favoriteLibrarian = new class_1.UniversityLibrarian();
-favoriteLibrarian.name = "Sharon";
-favoriteLibrarian.assistCustomer("Lynda");
+var ref = new class_1.ReferenceItem("Updated Facts and Figures", 2012);
+ref.printItem();
+ref.publisher = "Radom Data Publishing";
+console.log(ref.publisher);
 //# sourceMappingURL=app.js.map

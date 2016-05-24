@@ -1,6 +1,6 @@
 import { Category } from "./enum";
 import { IBook, IDamageLogger, IAuthor, ILibrarian } from "./interfaces";
-import { UniversityLibrarian } from "./class";
+import { UniversityLibrarian, ReferenceItem } from "./class";
 
 function GetAllBooks(): Array<IBook> {
   let books = [
@@ -110,6 +110,11 @@ function PrintBook(book: IBook): void {
 }
 // *******************************************************
 
+let ref: ReferenceItem = new ReferenceItem("Updated Facts and Figures", 2012);
+ref.printItem();
+ref.publisher = "Radom Data Publishing";
+console.log(ref.publisher);
+
 // let myBook: IBook = {
 //   id: 6,
 //   title: "Pride and Predjudice",
@@ -156,6 +161,6 @@ function PrintBook(book: IBook): void {
 // fictionBooks.forEach((val, idx, arr) => console.log(++idx + " = " + val));
 
 
-let favoriteLibrarian: ILibrarian = new UniversityLibrarian();
-favoriteLibrarian.name = "Sharon";
-favoriteLibrarian.assistCustomer("Lynda");
+// let favoriteLibrarian: ILibrarian = new UniversityLibrarian();
+// favoriteLibrarian.name = "Sharon";
+// favoriteLibrarian.assistCustomer("Lynda");
