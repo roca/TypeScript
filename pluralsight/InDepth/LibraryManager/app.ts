@@ -1,6 +1,6 @@
 import { Category } from "./enum";
 import { IBook, IDamageLogger, IAuthor, ILibrarian } from "./interfaces";
-import { UniversityLibrarian, ReferenceItem } from "./class";
+import { UniversityLibrarian, ReferenceItem, Encyclopedia } from "./class";
 
 function GetAllBooks(): Array<IBook> {
   let books = [
@@ -110,11 +110,14 @@ function PrintBook(book: IBook): void {
 }
 // *******************************************************
 
-let ref: ReferenceItem = new ReferenceItem("Updated Facts and Figures", 2012);
-ref.printItem();
-ref.publisher = "Radom Data Publishing";
-console.log(ref.publisher);
+let refBook = new Encyclopedia("WorldPedia", 1900, 10);
+refBook.printItem();
 
+// let ref: ReferenceItem = new ReferenceItem("Updated Facts and Figures", 2012);
+// ref.printItem();
+// ref.publisher = "Radom Data Publishing";
+// console.log(ref.publisher);
+//
 // let myBook: IBook = {
 //   id: 6,
 //   title: "Pride and Predjudice",

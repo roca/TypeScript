@@ -1,4 +1,9 @@
 "use strict";
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var UniversityLibrarian = (function () {
     function UniversityLibrarian() {
     }
@@ -15,7 +20,7 @@ var ReferenceItem = (function () {
         console.log("Creating a new ReferenceItem...");
     }
     ReferenceItem.prototype.printItem = function () {
-        console.log(this.title + " was published in " + this.year);
+        console.log(this.title + " was published in " + this.year + ".");
         console.log("Department: " + ReferenceItem.department);
     };
     Object.defineProperty(ReferenceItem.prototype, "publisher", {
@@ -32,4 +37,17 @@ var ReferenceItem = (function () {
     return ReferenceItem;
 }());
 exports.ReferenceItem = ReferenceItem;
+var Encyclopedia = (function (_super) {
+    __extends(Encyclopedia, _super);
+    function Encyclopedia(newTitle, newYear, edition) {
+        _super.call(this, newTitle, newYear);
+        this.edition = edition;
+    }
+    Encyclopedia.prototype.printItem = function () {
+        _super.prototype.printItem.call(this);
+        console.log("Edition: " + this.edition + " (" + this.year + ")");
+    };
+    return Encyclopedia;
+}(ReferenceItem));
+exports.Encyclopedia = Encyclopedia;
 //# sourceMappingURL=class.js.map
