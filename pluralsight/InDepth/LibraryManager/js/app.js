@@ -1,4 +1,9 @@
 "use strict";
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var enum_1 = require("./enum");
 var class_1 = require("./class");
 function GetAllBooks() {
@@ -84,6 +89,30 @@ function GetTitles(bookPropery) {
 function PrintBook(book) {
     console.log(book.title + " by " + book.author);
 }
-var refBook = new class_1.Encyclopedia("WorldPedia", 1900, 10);
-refBook.printItem();
+var Newspaper = (function (_super) {
+    __extends(class_2, _super);
+    function class_2() {
+        _super.apply(this, arguments);
+    }
+    class_2.prototype.printCitation = function () {
+        console.log("Newspaper: " + this.title);
+    };
+    return class_2;
+}(class_1.ReferenceItem));
+var myPaper = new Newspaper("The Gazette", 2016);
+myPaper.printCitation();
+var Novel = (function (_super) {
+    __extends(Novel, _super);
+    function Novel() {
+        _super.apply(this, arguments);
+    }
+    return Novel;
+}((function () {
+    function class_3() {
+        this.title = "Dune";
+    }
+    return class_3;
+}())));
+var favoriteNovel = new Novel();
+console.log(favoriteNovel.title);
 //# sourceMappingURL=app.js.map
