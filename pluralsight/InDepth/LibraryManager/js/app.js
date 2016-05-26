@@ -6,6 +6,9 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var enum_1 = require("./enum");
 var class_1 = require("./class");
+var utilityFunctions_1 = require("./lib/utilityFunctions");
+var fee = utilityFunctions_1.CalculateLateFee(5);
+var max = utilityFunctions_1.MaxBooksAllowed(12);
 function GetAllBooks() {
     var books = [
         { id: 1, title: "Ulsses", author: "James Joyce", available: true, category: enum_1.Category.Fiction },
