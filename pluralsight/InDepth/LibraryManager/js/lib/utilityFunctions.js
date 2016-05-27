@@ -1,11 +1,8 @@
 "use strict";
-var Fees;
-(function (Fees) {
-    function CalculateLateFee(daysLate) {
-        return daysLate * 0.25;
-    }
-    Fees.CalculateLateFee = CalculateLateFee;
-})(Fees = exports.Fees || (exports.Fees = {}));
+function CalculateLateFee(daysLate) {
+    return daysLate * 0.25;
+}
+exports.CalculateLateFee = CalculateLateFee;
 function MaxBooksAllowed(age) {
     return (age < 12) ? 3 : 10;
 }

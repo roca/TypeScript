@@ -1,10 +1,13 @@
 import { Category } from "./enum";
-import { IBook, IDamageLogger, IAuthor, ILibrarian } from "./interfaces";
-import { UniversityLibrarian, ReferenceItem, Encyclopedia } from "./class";
+import { IBook, ILogger, IAuthor, ILibrarian } from "./interfaces";
+import { UniversityLibrarian, ReferenceItem } from "./class";
 import { CalculateLateFee as CalcFee, MaxBooksAllowed } from "./lib/utilityFunctions";
+import refBook from "./uncyclopedia";
 
-let fee = CalcFee(5);
-let max = MaxBooksAllowed(12);
+let reference = new refBook("Fact Book",2016,1);
+
+// let fee = CalcFee(5);
+// let max = MaxBooksAllowed(12);
 
 function GetAllBooks(): Array<IBook> {
   let books = [
@@ -192,3 +195,8 @@ console.log(favoriteNovel.title);
 // let favoriteLibrarian: ILibrarian = new UniversityLibrarian();
 // favoriteLibrarian.name = "Sharon";
 // favoriteLibrarian.assistCustomer("Lynda");
+// let x = [{"id": 1}, {"id": -2}, {"id": 3}].find(myObj => myObj.id < 0) ;
+//
+// let obj = { a: 1 };
+// let copy = Object.assign({}, obj);
+// console.log(copy); // { a: 1 };

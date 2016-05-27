@@ -27,4 +27,4 @@ interface ILibrarian extends IPerson {
   department: string;
   assistCustomer: (custName: string) => void;
 }
-export { IBook, IDamageLogger, IAuthor, ILibrarian };
+export { IBook, IDamageLogger as ILogger, IAuthor, ILibrarian };
