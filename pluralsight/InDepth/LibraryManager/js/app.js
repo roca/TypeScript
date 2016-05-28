@@ -5,9 +5,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var enum_1 = require("./enum");
-var class_1 = require("./class");
-var uncyclopedia_1 = require("./uncyclopedia");
-var reference = new uncyclopedia_1.default("Fact Book", 2016, 1);
+var shelf_1 = require("./shelf");
 function GetAllBooks() {
     var books = [
         { id: 1, title: "Ulsses", author: "James Joyce", available: true, category: enum_1.Category.Fiction },
@@ -91,18 +89,6 @@ function GetTitles(bookPropery) {
 function PrintBook(book) {
     console.log(book.title + " by " + book.author);
 }
-var Newspaper = (function (_super) {
-    __extends(class_2, _super);
-    function class_2() {
-        _super.apply(this, arguments);
-    }
-    class_2.prototype.printCitation = function () {
-        console.log("Newspaper: " + this.title);
-    };
-    return class_2;
-}(class_1.ReferenceItem));
-var myPaper = new Newspaper("The Gazette", 2016);
-myPaper.printCitation();
 var Novel = (function (_super) {
     __extends(Novel, _super);
     function Novel() {
@@ -110,11 +96,26 @@ var Novel = (function (_super) {
     }
     return Novel;
 }((function () {
-    function class_3() {
+    function class_1() {
         this.title = "Dune";
     }
-    return class_3;
+    return class_1;
 }())));
-var favoriteNovel = new Novel();
-console.log(favoriteNovel.title);
+var inventory = [
+    { id: 10, title: "The C Programming Language", author: "K & R", available: true, category: enum_1.Category.Software },
+    { id: 11, title: "Code Complete", author: "Steve McConnell", available: true, category: enum_1.Category.Software },
+    { id: 12, title: "8-bit Graphics with Cobol", author: "A. B.", available: true, category: enum_1.Category.Software },
+    { id: 13, title: "Cool autoexec.bat Scripts", author: "C. D.", available: true, category: enum_1.Category.Software },
+];
+var bookShelf = new shelf_1.default();
+inventory.forEach(function (book) { return bookShelf.add(book); });
+var firstBook = bookShelf.getFirst();
+var magazines = [
+    { title: "Programming Language Monthly", publisher: "Code Mags" },
+    { title: "Literary Fixtion Quarterly", publisher: "College Press" },
+    { title: "Five Points", publisher: "GSU" }
+];
+var magazineShelf = new shelf_1.default();
+magazines.forEach(function (mag) { return magazineShelf.add(mag); });
+var firstMagazine = magazineShelf.getFirst();
 //# sourceMappingURL=app.js.map

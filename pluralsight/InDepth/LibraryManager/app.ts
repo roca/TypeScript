@@ -1,10 +1,11 @@
 import { Category } from "./enum";
-import { IBook, ILogger, IAuthor, ILibrarian } from "./interfaces";
+import { IBook, ILogger, IAuthor, ILibrarian, IMagazine } from "./interfaces";
 import { UniversityLibrarian, ReferenceItem } from "./class";
-import { CalculateLateFee as CalcFee, MaxBooksAllowed } from "./lib/utilityFunctions";
+import { CalculateLateFee as CalcFee, MaxBooksAllowed, Purge } from "./lib/utilityFunctions";
 import refBook from "./uncyclopedia";
-
-let reference = new refBook("Fact Book",2016,1);
+import Shelf from "./shelf";
+//
+// let reference = new refBook("Fact Book", 2016, 1);
 
 // let fee = CalcFee(5);
 // let max = MaxBooksAllowed(12);
@@ -120,14 +121,14 @@ function PrintBook(book: IBook): void {
 // let refBook: ReferenceItem = new Encyclopedia("WorldPedia", 1900, 10);
 // refBook.printCitation();
 
-let Newspaper = class extends ReferenceItem {
-  printCitation(): void {
-    console.log(`Newspaper: ${this.title}`);
-  }
-};
+// let Newspaper = class extends ReferenceItem {
+//   printCitation(): void {
+//     console.log(`Newspaper: ${this.title}`);
+//   }
+// };
 
-let myPaper = new Newspaper("The Gazette", 2016);
-myPaper.printCitation();
+// let myPaper = new Newspaper("The Gazette", 2016);
+// myPaper.printCitation();
 
 class Novel extends class {
   title: string;
@@ -138,8 +139,8 @@ class Novel extends class {
   mainCharacter: string;
 }
 
-let favoriteNovel = new Novel();
-console.log(favoriteNovel.title);
+// let favoriteNovel = new Novel();
+// console.log(favoriteNovel.title);
 
 // let ref: ReferenceItem = new ReferenceItem("Updated Facts and Figures", 2012);
 // ref.printItem();
@@ -200,3 +201,33 @@ console.log(favoriteNovel.title);
 // let obj = { a: 1 };
 // let copy = Object.assign({}, obj);
 // console.log(copy); // { a: 1 };
+let inventory: Array<IBook> = [
+  { id: 10, title: "The C Programming Language", author: "K & R", available: true, category: Category.Software },
+  { id: 11, title: "Code Complete", author: "Steve McConnell", available: true, category: Category.Software},
+  { id: 12, title: "8-bit Graphics with Cobol", author: "A. B.", available: true, category: Category.Software },
+  { id: 13, title: "Cool autoexec.bat Scripts", author: "C. D.", available: true, category: Category.Software},
+];
+
+// let purgedBooks: Array<IBook> = Purge(inventory);
+// purgedBooks.forEach( book => console.log(book.title));
+//
+// let purgedNums: Array<number> = Purge<number>([1, 2, 3, 4]);
+// console.log(purgedNums);
+
+let bookShelf: Shelf<IBook> = new Shelf<IBook>();
+
+inventory.forEach(book => bookShelf.add(book));
+
+let firstBook: IBook = bookShelf.getFirst();
+
+let magazines: Array<IMagazine> = [
+  { title: "Programming Language Monthly", publisher: "Code Mags" },
+  { title: "Literary Fixtion Quarterly", publisher: "College Press" },
+  { title: "Five Points", publisher: "GSU"}
+];
+
+let magazineShelf: Shelf<IMagazine> = new Shelf<IMagazine>();
+
+magazines.forEach(mag => magazineShelf.add(mag));
+
+let firstMagazine: IMagazine = magazineShelf.getFirst();
