@@ -231,3 +231,8 @@ let magazineShelf: Shelf<IMagazine> = new Shelf<IMagazine>();
 magazines.forEach(mag => magazineShelf.add(mag));
 
 let firstMagazine: IMagazine = magazineShelf.getFirst();
+
+magazineShelf.printTitles();
+
+let softwareBook = bookShelf.find("Code Complete");
+console.log(`${softwareBook.title} (${softwareBook.author})`);

@@ -118,4 +118,7 @@ var magazines = [
 var magazineShelf = new shelf_1.default();
 magazines.forEach(function (mag) { return magazineShelf.add(mag); });
 var firstMagazine = magazineShelf.getFirst();
+magazineShelf.printTitles();
+var softwareBook = bookShelf.find("Code Complete");
+console.log(softwareBook.title + " (" + softwareBook.author + ")");
 //# sourceMappingURL=app.js.map
