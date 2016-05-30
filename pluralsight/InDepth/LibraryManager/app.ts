@@ -1,9 +1,14 @@
+
 import { Category } from "./enum";
 import { IBook, ILogger, IAuthor, ILibrarian, IMagazine } from "./interfaces";
 import { UniversityLibrarian, ReferenceItem } from "./class";
 import { CalculateLateFee as CalcFee, MaxBooksAllowed, Purge } from "./lib/utilityFunctions";
 import refBook from "./uncyclopedia";
 import Shelf from "./shelf";
+import * as _ from "lodash";
+
+let snakeCaseTitle = _.snakeCase("For Whom the Bell Tolls");
+console.log(snakeCaseTitle);
 //
 // let reference = new refBook("Fact Book", 2016, 1);
 

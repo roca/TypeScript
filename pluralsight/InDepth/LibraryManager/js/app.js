@@ -6,6 +6,9 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var enum_1 = require("./enum");
 var shelf_1 = require("./shelf");
+var _ = require("lodash");
+var snakeCaseTitle = _.snakeCase("For Whom the Bell Tolls");
+console.log(snakeCaseTitle);
 function GetAllBooks() {
     var books = [
         { id: 1, title: "Ulsses", author: "James Joyce", available: true, category: enum_1.Category.Fiction },
