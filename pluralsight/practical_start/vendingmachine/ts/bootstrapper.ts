@@ -1,0 +1,1 @@
+var machine = new VendingMachine();
