@@ -1,3 +1,3 @@
-class VendingMachine{
+class VendingMachine {
     
 }
