@@ -1,4 +1,4 @@
-class Quater {
+class Quarter {
     private value: number = .25;
     get Value() {
         return .25;
@@ -7,6 +7,6 @@ class Quater {
     //     this.value = newValue;
     // }
     getImageUrl(): string {
-       return "img/Quater.png";
+       return "img/Quarter.png";
     }
 }
