@@ -6,8 +6,10 @@
     <body>
         <div class="conatiner">
             <h1>Vendng machine simulation</h1>
-            <div class="col-md-8">
-
+            <div class="col-md-8 machine" data-bind="foreach: cells">
+                <div class="col-md-6 image">
+                    <img data-bind="attr: {src: product.category.getImageUrl(), alt: product.category.name}"/>
+                </div>
             </div>
             <div class="col-md-4">
                 <h4>
