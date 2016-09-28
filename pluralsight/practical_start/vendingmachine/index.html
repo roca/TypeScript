@@ -23,7 +23,7 @@
 
             <div class="col-md-4">
                 <h4>
-                    Path: $
+                    Payed: $
                    <span id="total" data-bind="text: paid"></span>
                 </h4>    
                 <div data-bind="foreach: acceptedCoins">
@@ -39,6 +39,10 @@
                         </div>
                     </div>
                 </h3>
+                <button class="btn btn-primary payButton"
+                        data-bind="enable: canPay, click: pay">
+                    Pay
+                </button>
             </div>
         </div>
         <script src="js/lib/knockout-3.4.0.js"></script>
