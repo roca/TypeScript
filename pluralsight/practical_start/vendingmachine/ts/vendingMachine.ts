@@ -18,6 +18,7 @@ class Cell {
 }
 class VendingMachine {
    paid = ko.observable(0);
+   selectedCell = ko.observable(new Cell(new CocaCola()));
    cells = ko.observableArray([]);
    acceptedCoins: Quarter[] = [new Quarter()];
 
@@ -29,6 +30,11 @@ class VendingMachine {
           this.cells.push(new Cell(product));
        }
    }
+
+   select = (cell: Cell): void => {
+       cell.sold(false);
+       this.selectedCell(cell);
+   };
 
    acceptCoin = (coin: Quarter): void => {
        let oldTotal = this.paid();

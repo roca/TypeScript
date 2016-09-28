@@ -7,18 +7,38 @@
         <div class="conatiner">
             <h1>Vendng machine simulation</h1>
             <div class="col-md-8 machine" data-bind="foreach: cells">
-                <div class="col-md-6 image">
-                    <img data-bind="attr: {src: product.category.getImageUrl(), alt: product.category.name}"/>
+                <div class="col-md-4 cell" data-bind="click: $parent.select, 
+                css: {selected: $parent.selectedCell().product == $data.product,
+                sold: sold}" >
+                    <div class="col-md-6 image">
+                        <img data-bind="attr: {src: product.category.getImageUrl(), alt: product.category.name}"/>
+                    </div>
+                    <div class="col-md-6 productInfo">
+                        <div data-bind="text: product.name"></div>
+                        <h4 data-bind="text: stock"></h4>
+                        <h3 data-bind="text: '$ ' + product.price"></h3>
+                    </div>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <h4>
                     Path: $
-                   <span id="total" data-bind="text: paid"></span> 
-                   <div data-bind="foreach: acceptedCoins">
-                      <img data-bind="attr: {src: getImageUrl(), alt: Value},click: $parent.acceptCoin"/>               
-                    </div>                 
-                </h4>
+                   <span id="total" data-bind="text: paid"></span>
+                </h4>    
+                <div data-bind="foreach: acceptedCoins">
+                    <img data-bind="attr: {src: getImageUrl(), alt: Value},click: $parent.acceptCoin"/>               
+                </div>                 
+                <h3>
+                    <div  data-bind="with: selectedCell">
+                        <div data-bind="text: product.name">
+                            <div>
+                                $
+                                <span data-bind="text: product.price"></span>
+                            </div>
+                        </div>
+                    </div>
+                </h3>
             </div>
         </div>
         <script src="js/lib/knockout-3.4.0.js"></script>
