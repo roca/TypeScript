@@ -1,12 +1,30 @@
-class Quarter {
-    private value: number = .25;
-    get Value() {
-        return .25;
+abstract class Coin {
+    constructor(private value: number,private imageUrl: string){}
+    get Value() { 
+        return this.value;
     }
-    // set Value(newValue: number) {
-    //     this.value = newValue;
-    // }
     getImageUrl(): string {
-       return "img/Quarter.png";
+       return this.imageUrl;
+    }
+}
+
+class Quarter extends Coin {
+    constructor(){
+        super(.25,"img/Quarter.png");
+    }
+}
+class Dime extends Coin {
+    constructor() {
+        super(.10,"img/Dime.png");
+    }
+}
+class Half extends Coin {
+    constructor() {
+        super(.5,"img/Half.png");
+    }
+}
+class Dollar extends Coin {
+    constructor() {
+        super(1.00,"img/Dollar.jpg");
     }
 }
