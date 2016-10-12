@@ -25,3 +25,11 @@ class CandyBarCategory extends ProductCategory {
         super("Candy Bar","CandyBar.png");
     }
 }
+
+export {
+    ProductCategory, 
+    SodaCategory, 
+    ChipsCategory as PotatoChipsCategory, 
+    CandyCategory, 
+    CandyBarCategory
+}
