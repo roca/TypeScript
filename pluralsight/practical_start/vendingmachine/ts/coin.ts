@@ -1,5 +1,3 @@
-namespace Coins {
-
     let imagePath = "img/";
 
     export abstract class Coin {
@@ -32,4 +30,3 @@ namespace Coins {
             super(1.00,"Dollar.jpg");
         }
     }
-}
