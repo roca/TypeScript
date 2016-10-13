@@ -50,7 +50,7 @@
         <script>
             require(["js/vendingMachine"],function(machineModule) {
                 var machine = new machineModule.VendingMachine();
-                machine.size = VendingMachineSize.medium;
+                machine.size = machineModule.VendingMachineSize.medium;
                 ko.applyBindings(machine);
             });
         </script>

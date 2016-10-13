@@ -2,6 +2,7 @@
     "compilerOptions": {
         "target": "es5",
         "outDir": "../js",
+        "experimentalDecorators": true,
         "sourceMap": true,
         "module":"amd"
     }
